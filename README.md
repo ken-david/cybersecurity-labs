@@ -9,6 +9,7 @@ TryHackMe labs, Cyberdefenders labs and SOC-related exercises.
 - SIEM fundamentals
 - Incident response basics
 - Network traffic analysis
+- Malware Analysis
 
 ## 🧪 Platforms
 - TryHackMe
