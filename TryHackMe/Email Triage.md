@@ -1,4 +1,4 @@
-# TryHackMe — Email Triage: Greenholt PLC (Analyst Report)
+# TryHackMe — Email Analysis: Greenholt PLC (Analyst Report)
 
 **Author:** Ken David
 
