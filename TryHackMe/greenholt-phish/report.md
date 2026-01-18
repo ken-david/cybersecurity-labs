@@ -66,40 +66,37 @@ A suspicious email with an unexpected `.CAB` attachment was reported by a Sales 
 - Performed `whois` lookup: ownership points to Hostwinds LLC (commercial hosting provider) — often used by threat actors to host malicious infrastructure.
 
 **Commands (examples):**
-```bash
+
+```
 # show origin IP in the saved headers file
 grep -i "Received:" message_source.txt | tail -n 10
 
 # whois lookup
 whois 192.119.71.157
 
+```
+
 ### 2) Envelope / Return-Path checks (SPF/DMARC)
 - Located the return-path domain from headers.
 - Checked SPF record (TXT) and DMARC policy via DNS:
-
+```
 dig +short TXT example-return-path.com
 dig +short TXT _dmarc.example-return-path.com
-
-
-Observations: SPF restricted to Microsoft infrastructure with -all (hard fail). DMARC policy quarantine. This indicates the legitimate domain has authentication, but the email observed still came from an IP not listed for the domain — a strong spoofing indicator.
+```
+- Observations: SPF restricted to Microsoft infrastructure with -all (hard fail). DMARC policy quarantine. This indicates the legitimate domain has authentication, but the email observed still came from an IP not listed for the domain — a strong spoofing indicator.
 
 ### 3) Attachment analysis (non-execution)
-
-Attachment filename: SWT_#09674321___PDF__.CAB
-
-DO NOT execute. Extract metadata where possible in a safe environment (sandbox or isolated VM).
-
-Generated file hash:
-
+- Attachment filename: SWT_#09674321___PDF__.CAB
+- DO NOT execute. Extract metadata where possible in a safe environment (sandbox or isolated VM).
+- Generated file hash:
+```
 sha256sum "SWT_#09674321___PDF__.CAB"
 # Example output:
 # <SHA256_HASH>  SWT_#09674321___PDF__.CAB
+```
+- Queried VirusTotal with the SHA256 and file — returned multiple detections indicating malicious content.
 
-
-Queried VirusTotal with the SHA256 and file — returned multiple detections indicating malicious content.
-
-4) Conclusion
-
-Multiple indicators (suspicious wording, originating IP from a generic hosting provider, return-path and envelope mismatch, malicious detection on VirusTotal) confirm a phishing/malicious email. Recommend containment and escalation to Level 2/3 for full forensic and sandbox analysis.
+### 4) Conclusion
+- Multiple indicators (suspicious wording, originating IP from a generic hosting provider, return-path and envelope mismatch, malicious detection on VirusTotal) confirm a phishing/malicious email. Recommend containment and escalation to Level 2/3 for full forensic and sandbox analysis.
 
 
