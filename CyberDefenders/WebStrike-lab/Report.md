@@ -30,8 +30,14 @@ Analyze the PCAP file to determine:
 ## Intial Traffic Analysis & Attack Origin
 The PCAP file was opened in Wireshark to establish an overview of the captured traffic.
 
-![Alt text for the screenshot](CyberDefenders/WebStrike-lab/screenshots/open_pcap.png)
+![PCAP](screenshots/open_pcap.png)
 
+Early analysis revealed consistent communication between two IP addresses:
+- 24.49.63.79 – Identified as the web server
+- 117.11.88.124 – Suspected external attacker
+
+To validate this observation, IPv4 endpoint statistics were reviewed:
+![ipv4](screenshots/ipv4_endpoints.png)
 
 ## Investigation & Findings
 
