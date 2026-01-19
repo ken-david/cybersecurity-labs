@@ -33,11 +33,31 @@ The PCAP file was opened in Wireshark to establish an overview of the captured t
 ![PCAP](screenshots/open_pcap.png)
 
 Early analysis revealed consistent communication between two IP addresses:
-- 24.49.63.79 – Identified as the web server
-- 117.11.88.124 – Suspected external attacker
+- **24.49.63.79** – Identified as the web server
+- **117.11.88.124** – Suspected external attacker
 
 To validate this observation, IPv4 endpoint statistics were reviewed:
 ![ipv4](screenshots/ipv4_endpoints.png)
+
+The endpoint statistics confirmed a high volume of traffic exchanged between these two hosts.
+
+A geolocation lookup was performed on the suspected attacker IP address to provide contextual threat intelligence:
+
+![ipv4](screenshots/ipv4_endpoints.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Investigation & Findings
 
