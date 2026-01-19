@@ -4,16 +4,17 @@ This repository contains my personal documentation and write-ups from
 TryHackMe labs, Cyberdefenders labs and SOC-related exercises.
 
 ## Skills Practiced
+- Network traffic analysis
 - Security alert triage
 - Log analysis
 - SIEM fundamentals
 - Incident response basics
-- Network traffic analysis
 - Malware Analysis
 
 ## Platforms
 - TryHackMe
 - Cyberdefenders
+- Home Labs
 
 ## Disclaimer
 These write-ups are for educational purposes only.
