@@ -20,5 +20,4 @@ These write-ups are for educational purposes only.
 No flags, passwords, or solutions are shared that violate platform rules.
 
 ## Goal
-To demonstrate my hands-on cybersecurity learning and readiness
-for an SOC Analyst role.
+To demonstrate my hands-on cybersecurity learning
