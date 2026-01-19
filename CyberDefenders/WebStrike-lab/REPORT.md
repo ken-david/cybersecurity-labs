@@ -36,9 +36,9 @@ Early analysis revealed consistent communication between two IP addresses:
 To validate this observation, IPv4 endpoint statistics were reviewed:
 ![ipv4](screenshots/ipv4_endpoints.png)
 
-The endpoint statistics confirmed a high volume of traffic exchanged between these two hosts.
+The endpoint statistics confirmed a high volume of traffic exchanged between these two IPs.
 
-A geolocation lookup was performed on the suspected attacker IP address to provide contextual threat intelligence:
+A geolocation lookup was performed on the suspected attacker IP address using an online IP geolocation service. This is to identify the attacker's location.
 
 ![ipv4](screenshots/ip_geolocation.png)
 
@@ -49,7 +49,7 @@ The attack originated from Tianjin, China, suggesting an external threat actor o
 
 To better profile the attacker, HTTP traffic was examined by following relevant HTTP streams.
 
-Inspection of request headers revealed the attacker’s User-Agent string:
+Inspection of request headers revealed the attacker’s User-Agent string.
 
 `Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0`
 
@@ -81,7 +81,7 @@ Two suspicious POST requests were observed targeting the endpoint `/reviews/uplo
 
 By appending a misleading image extension, the attacker bypassed server-side file validation. The uploaded file contained PHP code invoking the system() function to execute operating system commands.
 
-Finding:
+**Finding:**
 The attacker successfully deployed a malicious web shell named image.jpg.php.
 
 ## Uploaded File Storage Location
@@ -125,25 +125,19 @@ This indicates intent to collect user account information from the compromised h
 | Reverse Shell Port    | 8080              |
 | Exfiltration Target   | /etc/passwd       |
 
-## Security Impact & Recommendations
 
-**Impact**
-- Remote code execution achieved
-- Persistent access via web shell
-- Attempted data exfiltration
-- Inadequate file upload validation exposed
+## Key Takeaways
+- The attacker exploited insufficient file upload validation to deploy a PHP web shell.
+- A reverse shell was established using Netcat on port 8080.
+- Sensitive system data (/etc/passwd) was targeted for exfiltration.
+- Proper file validation, least-privilege permissions, and outbound traffic monitoring could have mitigated this attack.
 
-**Recommendations**
+## Recommendations
 - Enforce strict server-side file type validation
 - Disable execution permissions in upload directories
 - Monitor outbound connections for unauthorized ports
 - Implement web application firewall (WAF) rules
-- Conduct credential and integrity audits post-incident
 
 ## Conclusion
 
 This investigation demonstrates how a simple file upload vulnerability can lead to full system compromise. Through network traffic analysis, the attacker’s actions were reconstructed from initial access to attempted data exfiltration. Proper defensive controls and monitoring could have prevented or significantly limited the impact of this attack.
-
-## Investigation & Findings
-
-## Key Takeaways
