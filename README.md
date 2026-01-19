@@ -3,7 +3,7 @@
 This repository contains my personal documentation and write-ups from
 TryHackMe labs, Cyberdefenders labs and SOC-related exercises.
 
-## 🔐 Skills Practiced
+## Skills Practiced
 - Security alert triage
 - Log analysis
 - SIEM fundamentals
@@ -11,14 +11,14 @@ TryHackMe labs, Cyberdefenders labs and SOC-related exercises.
 - Network traffic analysis
 - Malware Analysis
 
-## 🧪 Platforms
+## Platforms
 - TryHackMe
 - Cyberdefenders
 
-## ⚠️ Disclaimer
+## Disclaimer
 These write-ups are for educational purposes only.
 No flags, passwords, or solutions are shared that violate platform rules.
 
-## 📌 Goal
+## Goal
 To demonstrate my hands-on cybersecurity learning and readiness
 for an SOC Analyst role.
