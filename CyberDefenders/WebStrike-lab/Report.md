@@ -30,6 +30,9 @@ Analyze the PCAP file to determine:
 ## Intial Traffic Analysis & Attack Origin
 The PCAP file was opened in Wireshark to establish an overview of the captured traffic.
 
+![Alt text for the screenshot](CyberDefenders/WebStrike-lab/screenshots/open_pcap.png)
+
+
 ## Investigation & Findings
 
 ## Key Takeaways
