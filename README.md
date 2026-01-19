@@ -5,11 +5,11 @@ TryHackMe labs, Cyberdefenders labs and SOC-related exercises.
 
 ## Skills Practiced
 - Network traffic analysis
+- Malware Analysis
 - Security alert triage
 - Log analysis
 - SIEM fundamentals
 - Incident response basics
-- Malware Analysis
 
 ## Platforms
 - TryHackMe
