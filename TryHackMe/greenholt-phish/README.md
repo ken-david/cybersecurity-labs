@@ -1,4 +1,4 @@
-Lab (Work in Progress)
+### Lab (Work in Progress)
 
 This lab is not finished yet. Some important pieces are still missing and will be added later.
 
