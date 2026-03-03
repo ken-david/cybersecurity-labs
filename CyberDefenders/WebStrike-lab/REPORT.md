@@ -141,3 +141,5 @@ This indicates intent to collect user account information from the compromised h
 ## Conclusion
 
 This investigation demonstrates how a simple file upload vulnerability can lead to full system compromise. Through network traffic analysis, the attacker’s actions were reconstructed from initial access to attempted data exfiltration. Proper defensive controls and monitoring could have prevented or significantly limited the impact of this attack.
+
+.
